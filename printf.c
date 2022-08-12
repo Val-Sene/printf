@@ -29,6 +29,12 @@ int _printf(const char *format, ...)
 				case 's':
 					count += string_count(va_arg(data, char*));
 					break;
+				case 'd':
+					count += decimal_count(va_arg(data, int));
+					break;
+				case 'i':
+					count += decimal_count(va_arg(data, int));
+					break;
 				default:
 					break;
 			}
